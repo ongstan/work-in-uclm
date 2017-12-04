@@ -46,7 +46,18 @@ clusters = cluster.hierarchy.linkage(matsim, method = 'complete')
 cluster.hierarchy.dendrogram(clusters, color_threshold = 6)
 plt.show()
 
-clusters = cluster.hierarchy.fcluster(clusters, 4 , criterion = 'distance')
+# compare 
+import
 
-cluster.hierarchy.dendrogram(clusters, color_threshold = 4)
-plt.show()
+labels = cluster.hierarchy.fcluster(clusters, 23 , criterion = 'distance')
+
+# create label dict
+label_dic = {i:[] for i in range(1,7)}
+
+for index,val in enumerate(labels):
+    label_dic[val].append(index)
+    
+for i in range(1,5):
+    print(str(i)+':')
+    print(sum(dengue['station_avg_temp_c'][label_dic[i][:20]])/20)
+
