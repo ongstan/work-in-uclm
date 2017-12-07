@@ -22,3 +22,9 @@
   Above is while n_clusters = 4. Picture below is n_clusters=5. Obviously 4 is better than 5.
 
 - ![nclusters=5](kmeans=5.png)
+
+
+
+- pca![](kmeans_2.png)
+
+  ​
