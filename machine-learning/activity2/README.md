@@ -19,10 +19,4 @@
 
   ![dendrogram_1.png](dendrogram_1.png)
 
-- Match 4 label with group by watching temperature.![](dendrogram_2.png) the data.
-
-  ​
-
-- some group info
-
-- ![](dendrogram_3.png)
+- Match 4 label with group by watching temperature.![](dendrogram_2.png) the data.​

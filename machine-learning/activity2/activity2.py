@@ -61,9 +61,3 @@ for i in range(1,5):
     print(str(i)+':')
     print(sum(dengue['station_avg_temp_c'][label_dic[i][:20]])/20)
 
-# group info
-# 1 fever 4 rash 2 muscle 3 joint pain
-group_match = {1:'fever', 2: 'muscle', 3: 'joint pain', 4: 'rash'}
-for i in range(1,5):
-    print(group_match[i])
-    print(label_dic[i][:20])

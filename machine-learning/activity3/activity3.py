@@ -53,3 +53,12 @@ hyp.plot(dengue_subset_normalized, '.', n_clusters=4)
 
 hyp.plot(dengue_subset_normalized, '.', n_clusters=5)
 
+hyp.tools.describe_pca(dengue_subset_normalized)
+
+
+cluster = KMeans(n_clusters=i)
+cluster.fit(dengue_subset_normalized)
+arr = cluster.predict(dengue_subset.dropna().values)
+    
+print(Counter(arr))
+
