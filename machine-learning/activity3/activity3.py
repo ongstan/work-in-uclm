@@ -56,9 +56,18 @@ hyp.plot(dengue_subset_normalized, '.', n_clusters=5)
 hyp.tools.describe_pca(dengue_subset_normalized)
 
 
-cluster = KMeans(n_clusters=i)
+cluster = KMeans(n_clusters=4)
 cluster.fit(dengue_subset_normalized)
 arr = cluster.predict(dengue_subset.dropna().values)
     
 print(Counter(arr))
 
+arr_dic = {i:[] for i in set(arr)}
+
+for index,value in enumerate(final_labels):
+    #if value > 100:
+    #    value = 100    
+    arr_dic[arr[index]].append(value)
+    
+    
+[sum(arr_dic[i])/len(arr_dic[i]) for i in arr_dic.keys()]

@@ -47,14 +47,15 @@ cluster.hierarchy.dendrogram(clusters, color_threshold = 6)
 plt.show()
 
 # compare 
-import
+i#mport
 
 labels = cluster.hierarchy.fcluster(clusters, 23 , criterion = 'distance')
 
 # create label dict
 label_dic = {i:[] for i in range(1,7)}
+label = pd.read_csv('../dengue_labels_train.csv')
 
-for index,val in enumerate(labels):
+for index,val in enumerate(label['total_cases']):
     label_dic[val].append(index)
 
 for i in range(1,5):

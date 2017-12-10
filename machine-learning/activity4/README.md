@@ -20,3 +20,6 @@
 - Features selection
 
   pick the fields with top ranked correlation with label
+
+- result:
+  pdf file in this repository

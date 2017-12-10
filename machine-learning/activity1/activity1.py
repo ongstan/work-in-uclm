@@ -9,7 +9,7 @@ Created on Thu Oct 19 16:06:32 2017
 import pandas as pd
 
 # load features data
-dengue_features_train = pd.read_csv('dengue_features_train.csv')
+dengue_features_train = pd.read_csv('../dengue_features_train.csv')
 
 # calculate the correlation of features
 correlation_of_features = dengue_features_train.corr()
@@ -54,7 +54,7 @@ dengue = min_max_scaler.fit_transform(dengue_features_copy)
 
 # PCA estimation
 
-estimator = PCA (n_components = 2)
+estimator = PCA (n_components = 20)
 X_pca = estimator.fit_transform(dengue)
 
 print(estimator.explained_variance_ratio_) 
